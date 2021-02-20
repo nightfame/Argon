@@ -17,4 +17,4 @@ obj/lexer/%.o: src/lexer/%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 argon: $(OBJ)
-	$(CC) -o $@ $^ $(LDLAGS)
+	$(CC) -o $@ $^ $(LDLAGS) 

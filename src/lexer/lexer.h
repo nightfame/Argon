@@ -15,7 +15,7 @@ enum class TokenType {
     LPAREN,
     RPAREN,
 
-    NUMBER,
+    NUMBER, 
     WORD,
 
     POINT,

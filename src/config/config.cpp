@@ -42,7 +42,7 @@ void Config::run() {
         show_help();
     else {
         if(inputs.size() > 1)
-            throw runtime_error("Multiply input not supported yet");
+            throw runtime_error("Multiply input not supported yet"); 
         if(parameters["--verbose"])
             clog << "starting lexer..." << endl;
         auto lexems = Lexer(Loader::load_file(inputs[0].c_str())).get_tokens();

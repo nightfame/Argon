@@ -116,7 +116,7 @@ void Lexer::make_cases(char subject) {
         }
         catch(invalid_argument) { 
             parsing_word = true;
-            word += subject;
+            word += subject; 
             break;
         }
         parsing_number = true;

@@ -8,7 +8,7 @@
 using namespace std;
 
 class Config {
-public:
+public: 
     map<string, int> parameters;
     vector<string> inputs;
 

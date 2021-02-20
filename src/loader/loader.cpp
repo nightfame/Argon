@@ -15,5 +15,5 @@ string Loader::load_file(const char* filename) {
         throw runtime_error(string("Invalid filename: ") + filename);
     
     file.read(buffer, BUFFER_SIZE);
-    return string(buffer);
+    return string(buffer); 
 }
