@@ -31,7 +31,7 @@ Config::Config(int argc, char **argv) {
             }
             parameters[argv[i]] = num;
             i++; 
-        }
+        } 
         else // argv[i] is input file (no prefix)
             inputs.push_back(argv[i]);
     }

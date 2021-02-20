@@ -1,4 +1,4 @@
-CC = g++
+CC = g++ 
 CFLAGS = -g
 LDFLAGS = 
 DEPS = src/loader/loader.h src/config/config.h src/lexer/lexer.h
