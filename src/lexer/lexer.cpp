@@ -98,7 +98,7 @@ void Lexer::make_cases(char subject) {
     case ')':
         if(parsing_number) {
             tokens.push_back(Token(TokenType::NUMBER, number));
-            parsing_number = false;
+            parsing_number = false; 
             number = 0;
         }
         if(parsing_word) {

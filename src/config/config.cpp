@@ -37,7 +37,7 @@ Config::Config(int argc, char **argv) {
     }
 }
 
-void Config::run() {
+void Config::run() { 
     if(parameters["--help"])
         show_help();
     else {

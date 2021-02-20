@@ -4,7 +4,7 @@
 #include "loader.h"
 #include <fstream>
 #include <stdexcept>
-
+ 
 using namespace std;
 
 string Loader::load_file(const char* filename) {

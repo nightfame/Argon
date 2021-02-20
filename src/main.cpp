@@ -4,7 +4,7 @@
 #include "loader/loader.h"
 #include "lexer/lexer.h"
 
-using namespace std;
+using namespace std; 
 
 int main(int argc, char **argv) {
     try {
