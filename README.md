@@ -2,7 +2,7 @@
 Simple interpreter (in dev; now it has *very simple* lexer) **MIT LICENSE**
 
 ## Build
-### On Linux
+#### On Linux
 Run `make`
-### Other OS
+#### Other OS
 Good luck
