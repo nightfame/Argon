@@ -1,5 +1,5 @@
 /* ISO C++ forbids conversion from string literal to char* 
-   (can`t use strcat) */
+   (can't use strcat) */
 
 #include "config.h"
 #include "../loader/loader.h"
