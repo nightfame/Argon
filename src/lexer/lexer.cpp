@@ -1,5 +1,6 @@
 #include "lexer.h"
 
+// some overloads
 Token::Token(TokenType type): type(type) { }
 Token::Token(TokenType type, int num): type(type), num(num) { }
 Token::Token(TokenType type, string word): type(type), word(word) { }
@@ -11,12 +12,12 @@ Lexer::Lexer(string content) {
 }
 
 vector<Token> Lexer::get_tokens() {
-    return this->tokens;
+    return tokens;
 }
 
 void Lexer::make_cases(char subject) {
     switch (subject)
-    {
+    { // TODO make case macros
     case '+':
         if(parsing_number) {
             tokens.push_back(Token(TokenType::NUMBER, number));
@@ -109,7 +110,7 @@ void Lexer::make_cases(char subject) {
         tokens.push_back(Token(TokenType::RPAREN));
         break;
     default:
-        const char subj_to_str[] = {subject, '\0'};
+        const char subj_to_str[] = {subject, '\0'}; // stoi takes C-string or std::string, no char
         int subj_as_num = 0;
         try {
             subj_as_num = stoi(subj_to_str);

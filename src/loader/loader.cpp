@@ -1,5 +1,5 @@
 /* ISO C++ forbids conversion from string literal to char* 
-   (can`t use strcat) */
+   (can't use strcat) */
 
 #include "loader.h"
 #include <fstream>
@@ -7,6 +7,7 @@
  
 using namespace std;
 
+// Opens and read file; returns file content as std::string
 string Loader::load_file(const char* filename) {
     const int BUFFER_SIZE = 1024;
     char buffer[BUFFER_SIZE] = {0};
@@ -15,5 +16,5 @@ string Loader::load_file(const char* filename) {
         throw runtime_error(string("Invalid filename: ") + filename);
     
     file.read(buffer, BUFFER_SIZE);
-    return string(buffer); 
+    return string(buffer);
 }
