@@ -3,6 +3,8 @@ Simple interpreter (in dev; now it has *very simple* lexer)
 ## License
 MIT LICENSE
 ## Build
+#### Dependencies
+Argon has no dependencies
 #### On Linux
 Run `make`
 #### On Windows
