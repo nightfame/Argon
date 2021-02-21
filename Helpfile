@@ -4,4 +4,7 @@ Usage:
 Example:
     argon --help
 
+Flags:
+    --help - show this message
+
 IN DEV 
