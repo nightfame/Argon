@@ -39,6 +39,9 @@ class Lexer {
     int number = 0;
     bool parsing_word = false;
     bool parsing_number = false;
+    // ( count and ) count. Must be match
+    int lparen_count = 0;
+    int rparen_count = 0;
 
     void make_cases(char subject);
 public:

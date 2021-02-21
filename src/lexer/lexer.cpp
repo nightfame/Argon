@@ -9,6 +9,8 @@ Lexer::Lexer(string content) {
     for(int i = 0; i < content.length(); i++) {
         make_cases(content[i]);
     }
+    if(lparen_count != rparen_count)
+        throw runtime_error("lparen count != rparen count");
 }
 
 vector<Token> Lexer::get_tokens() {
@@ -95,6 +97,7 @@ void Lexer::make_cases(char subject) {
             word = "";
         }
         tokens.push_back(Token(TokenType::LPAREN));
+        lparen_count++;
         break;
     case ')':
         if(parsing_number) {
@@ -108,6 +111,7 @@ void Lexer::make_cases(char subject) {
             word = "";
         }
         tokens.push_back(Token(TokenType::RPAREN));
+        rparen_count++;
         break;
     default:
         const char subj_to_str[] = {subject, '\0'}; // stoi takes C-string or std::string, no char

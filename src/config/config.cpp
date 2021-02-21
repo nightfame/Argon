@@ -46,6 +46,8 @@ void Config::run() {
             cout << "Lexem " << i << " with type " << (int)lexems[i].type << endl;
             if(lexems[i].type == TokenType::WORD)
                 cout << "^ >\t" << lexems[i].word << endl;
+            else if(lexems[i].type == TokenType::NUMBER)
+                cout << "^ >\t" << lexems[i].num << endl;
         }
     }
 }
