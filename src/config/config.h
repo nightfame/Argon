@@ -10,7 +10,7 @@ using namespace std;
 class Config {
 public: 
     map<string, int> parameters;
-    vector<string> inputs;
+    string input;
 
     Config(int argc, char **argv);
 

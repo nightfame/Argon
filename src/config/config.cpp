@@ -33,7 +33,7 @@ Config::Config(int argc, char **argv) {
             i++; 
         } 
         else // argv[i] is input file (no prefix)
-            inputs.push_back(argv[i]);
+            input = argv[i];
     }
 }
 
@@ -41,11 +41,12 @@ void Config::run() {
     if(parameters["--help"])
         show_help();
     else {
-        if(inputs.size() > 1)
-            throw runtime_error("Multiply input not supported yet"); 
-        auto lexems = Lexer(Loader::load_file(inputs[0].c_str())).get_tokens();
-        for(int i = 0; i < lexems.size(); i++)
-            cout << lexems[i].word << endl;
+        auto lexems = Lexer(Loader::load_file(input.c_str())).get_tokens();
+        for(int i = 0; i < lexems.size(); i++) {
+            cout << "Lexem " << i << " with type " << (int)lexems[i].type << endl;
+            if(lexems[i].type == TokenType::WORD)
+                cout << "^ >\t" << lexems[i].word << endl;
+        }
     }
 }
 
