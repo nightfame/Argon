@@ -1,6 +1,6 @@
 CC = g++ 
 CFLAGS = -g
-LDFLAGS = 
+LDFLAGS =
 DEPS = src/loader/loader.h src/config/config.h src/lexer/lexer.h
 OBJ = obj/main.o obj/config/config.o obj/loader/loader.o obj/lexer/lexer.o
 
